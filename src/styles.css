@@ -4,7 +4,7 @@
 }
 
 .button {
-  background: #73BFB8;
+  background: #3DA5D9;
   border-radius: 50%;
   width: 64px;
   height: 64px;
@@ -29,5 +29,5 @@
 .button:active {
   transition: all 50ms ease;
   transform: scale(1.03);
-  background: #e5432d;
+  background: #FF4931;
 }
