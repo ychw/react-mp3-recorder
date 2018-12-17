@@ -9,6 +9,7 @@ import classNames from 'classnames'
 import vmsg from './vmsg'
 
 import micIcon from './mic-icon-white.svg'
+import stopIcon from './stop-icon.svg'
 import wasmURL from './vmsg.wasm'
 
 import styles from './styles.css'
@@ -53,12 +54,22 @@ export default class Recorder extends Component {
         className={classNames(styles.container, className)}
         {...rest}
       >
-        <div
-          className={styles.button}
-          onMouseDown={this._onMouseDown}
-          onMouseUp={this._onMouseUp}
-        >
-          <img src={micIcon} width={24} height={24} />
+        <div>
+          <div
+            className={styles.button}
+            onMouseDown={this._onMouseDown}
+            onMouseUp={this._onMouseUp}
+          >
+            <img src={micIcon} width={24} height={24} />
+          </div>
+          Loading ...
+          <div
+            className={styles.button}
+            onMouseDown={this._onMouseDown}
+            onMouseUp={this._onMouseUp}
+          >
+            <img src={stopIcon} width={24} height={24} />
+          </div>
         </div>
       </div>
     )
