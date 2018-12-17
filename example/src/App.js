@@ -5,6 +5,7 @@ import ReactAudioPlayer from 'react-audio-player'
 
 import blobToBuffer from 'blob-to-buffer'
 import ribbon from './ribbon.png'
+import './index.css';
 
 export default class App extends Component {
   state = {
@@ -43,6 +44,7 @@ export default class App extends Component {
         >
           <div>
             <Recorder
+              onRecordingStart={this._onRecordingStart}
               onRecordingComplete={this._onRecordingComplete}
               onRecordingError={this._onRecordingError}
               style={{
@@ -70,6 +72,8 @@ export default class App extends Component {
       </div>
     )
   }
+
+  _onRecordingStart = () => {}
 
   _onRecordingComplete = (blob) => {
     blobToBuffer(blob, (err, buffer) => {
