@@ -27,6 +27,8 @@ export default class Recorder extends Component {
 
     static defaultProps = {
         recorderParams: {},
+        onRecordingStart:() => {
+        },
         onRecordingComplete: () => {
         },
         onRecordingError: () => {
