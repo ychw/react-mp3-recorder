@@ -23,7 +23,7 @@ export default class Recorder extends Component {
         onRecordingComplete: PropTypes.func,
         onRecordingError: PropTypes.func,
         className: PropTypes.string
-    }
+    };
 
     static defaultProps = {
         recorderParams: {},
@@ -33,13 +33,13 @@ export default class Recorder extends Component {
         },
         onRecordingError: () => {
         }
-    }
+    };
 
     state = {
         isRecording: false
-    }
+    };
 
-    _recorder = null
+    _recorder = null;
 
     componentWillUnmount() {
         this._cleanup()
@@ -53,7 +53,7 @@ export default class Recorder extends Component {
             onRecordingError,
             className,
             ...rest
-        } = this.props
+        } = this.props;
 
         let icon = this.state.isRecording ? stopIcon : micIcon;
         let btnClass = this.state.isRecording ? styles.activeButton : styles.button;
@@ -75,8 +75,8 @@ export default class Recorder extends Component {
 
     _cleanup() {
         if (this._recorder) {
-            this._recorder.stopRecording()
-            this._recorder.close()
+            this._recorder.stopRecording();
+            this._recorder.close();
             delete this._recorder
         }
     }
